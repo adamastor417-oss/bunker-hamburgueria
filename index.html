@@ -65,63 +65,13 @@
 <button onclick="add('Bunker de Frango',43)" style="width:100%;background:#ffcc00;color:#000;border:0;padding:10px;border-radius:6px;margin-top:5px;font-weight:bold">+ CARRINHO</button>
 </div>
 
+</div>
+
 <h2 style="color:#ffcc00;border-left:5px solid #ffcc00;padding-left:10px;margin-top:20px">🥤 BEBIDAS GELADAS</h2>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
 
-<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center"><img src="https://i.ibb.co/gL1NhSjk/Screenshot-20261015-193817-2.jpg" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><div style="color:#ffcc00;font-size:10px">★★★★★ 4.9</div><b>Romance</b><br>R$ 7,00<br><button onclick="add('Romance',7)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px;margin-top:4px">+ CARRINHO</button></div>
+<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center;display:flex;flex-direction:column;justify-content:space-between;min-height:150px"><div><img src="https://i.ibb.co/gL1NhSjk/Screenshot-20261015-193817-2.jpg" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><div style="color:#ffcc00;font-size:10px">★★★★★ 4.9</div><b>Romance</b><br>R$ 7,00</div><button onclick="add('Romance',7)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px;margin-top:4px">+ CARRINHO</button></div>
 
-<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center"><img src="https://images.unsplash.com/photo-1553456558-aff63285bdd1?w=300" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><br>Coca 1L<br>R$ 10<br><button onclick="add('Coca 1L',10)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px;margin-top:4px">+ CARRINHO</button></div>
+<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center;display:flex;flex-direction:column;justify-content:space-between;min-height:150px"><div><img src="https://images.unsplash.com/photo-1553456558-aff63285bdd1?w=300" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><div><br>Coca 1L<br>R$ 10</div></div><button onclick="add('Coca 1L',10)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px;margin-top:4px">+ CARRINHO</button></div>
 
-<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center"><img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=300" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><br>Sprite<br>R$ 6<br><button onclick="add('Sprite',6)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px;margin-top:4px">+ CARRINHO</button></div>
-
-<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center"><img src="https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=300" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><br>Guarana<br>R$ 6<br><button onclick="add('Guarana',6)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px;margin-top:4px">+ CARRINHO</button></div>
-
-<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center"><img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=300" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><br>Fanta<br>R$ 6<br><button onclick="add('Fanta',6)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px;margin-top:4px">+ CARRINHO</button></div>
-
-<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center"><img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=300" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><br>Agua<br>R$ 4<br><button onclick="add('Agua',4)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px;margin-top:4px">+ CARRINHO</button></div>
-
-</div>
-<div style="height:100px"></div>
-</div>
-
-<div id="carrinho" onclick="abrir()" style="position:fixed;bottom:15px;left:15px;background:#ffcc00;color:#000;padding:14px 22px;border-radius:50px;font-weight:900;z-index:999;border:2px solid #e30613">🛒 Carrinho (<span id="q">0</span>) R$ <span id="t">0,00</span></div>
-<a href="https://wa.me/5549991017850?text=Ola%20Bunker" target="_blank" style="position:fixed;bottom:15px;right:15px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;z-index:999;text-decoration:none">💬</a>
-
-<div id="m" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:1000;padding:15px">
-<div style="max-width:500px;margin:auto;background:#fff;border-radius:12px;padding:15px;color:#000;margin-top:20px;border:3px solid #ffcc00">
-<h2>Seu Pedido</h2><div id="l"></div><b>Total R$ <span id="tm">0,00</span></b><br>
-<input id="n" placeholder="Seu nome" style="width:100%;padding:12px;margin-top:10px;border-radius:8px;border:1px solid #ccc">
-<input id="e" placeholder="Endereco" style="width:100%;padding:12px;margin-top:8px;border-radius:8px;border:1px solid #ccc">
-<button onclick="enviar()" style="width:100%;background:#ffcc00;color:#000;padding:15px;border-radius:10px;border:0;font-weight:900;margin-top:10px">ENVIAR NO ZAP</button>
-<button onclick="fechar()" style="width:100%;background:#000;color:#fff;padding:10px;border-radius:10px;border:0;margin-top:8px">Fechar</button>
-</div>
-</div>
-
-<script>
-var car=[];
-function add(nome,preco){car.push({nome:nome,preco:preco});atualiza();}
-function atualiza(){
- var tot=0;
- for(var i=0;i<car.length;i++){tot+=car[i].preco}
- document.getElementById('q').innerText=car.length;
- document.getElementById('t').innerText=tot.toFixed(2).replace('.',',');
- document.getElementById('tm').innerText=tot.toFixed(2).replace('.',',');
- var html='';
- for(var j=0;j<car.length;j++){html+='<div style="display:flex;justify-content:space-between;padding:6px;background:#eee;margin:4px 0;border-radius:5px"><span>'+car[j].nome+'</span><span>R$'+car[j].preco+' <a href="#" onclick="del('+j+');return false" style="color:red">X</a></span></div>'}
- document.getElementById('l').innerHTML=html;
-}
-function del(i){car.splice(i,1);atualiza()}
-function abrir(){document.getElementById('m').style.display='block'}
-function fechar(){document.getElementById('m').style.display='none'}
-function enviar(){
- if(car.length==0){alert('Carrinho vazio');return}
- var nome=document.getElementById('n').value||'Cliente';
- var end=document.getElementById('e').value||'Retirada';
- var msg='PEDIDO BUNKER%0A'+nome+'%0A'+end+'%0A%0A';
- var tot=0;
- for(var k=0;k<car.length;k++){msg+=car[k].nome+' R$'+car[k].preco+'%0A';tot+=car[k].preco}
- msg+='%0ATOTAL R$'+tot;
- window.open('https://wa.me/5549991017850?text='+msg,'_blank');
-}
-</script>
-</body></html>
+<div style="background:#222;border:1px solid #ffcc00;border-radius:10px;padding:8px;text-align:center;display:flex;flex-direction:column;justify-content:space-between;min-height:150px"><div><img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=300" style="width:100%;height:80px;object-fit:contain;background:#fff;border-radius:6px"><div><br>Sprite<br>R$ 6</div></div><button onclick="add('Sprite',6)" style="width:100%;background:#e30613;color:#fff;border:0;padding:6px;border-radius:5px
