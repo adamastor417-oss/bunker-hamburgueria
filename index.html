@@ -3,12 +3,13 @@
 <style>
 :root{--preto:#0a0a0a;--vermelho:#e30613;--amarelo:#ffcc00;}
 #carrinho{position:fixed;bottom:15px;left:15px;background:var(--amarelo);color:#000;padding:14px 22px;border-radius:50px;font-weight:bold;z-index:999;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,.6);border:2px solid var(--vermelho)}
-#zap{position:fixed;bottom:15px;right:15px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;z-index:999;text-decoration:none;animation:pulse 1.5s infinite;box-shadow:0 4px 15px rgba(0,0,0,.6)}
-@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{transform:scale(1.05);box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+#zap{position:fixed;bottom:15px;right:15px;background:#25D366;color:#fff;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;z-index:999;text-decoration:none;animation:pulse 1.5s infinite}
+@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{transform:scale(1.08);box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 #modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);z-index:1000;padding:15px;overflow:auto}
-.item{color:#000;background:#fff;padding:8px;border-radius:6px;margin:5px 0;display:flex;justify-content:space-between}
-.stars{color:var(--amarelo);font-size:12px}
-</style></head>
+.item{background:#fff;padding:8px;border-radius:6px;margin:5px 0;display:flex;justify-content:space-between;color:#000}
+.stars{color:var(--amarelo);font-size:11px}
+</style>
+</head>
 <body style="margin:0;font-family:Arial;background:var(--preto)">
 
 <div style="background:var(--preto);padding:8px 15px;display:flex;justify-content:space-between;border-bottom:3px solid var(--amarelo);align-items:center">
@@ -16,26 +17,126 @@
 <img src="https://i.ibb.co/B2sXBjwn/images-14.jpg" style="width:40px;height:40px;border-radius:50%;border:2px solid var(--amarelo);object-fit:cover;background:#fff">
 <div><b style="color:var(--amarelo)">BUNKER</b><br><b style="color:var(--vermelho);font-size:12px">HAMBURGUERIA</b></div>
 </div>
-<div style="color:#fff;font-size:10px;text-align:right">⭐ 4.9 (342 avaliações)<br><b style="color:var(--amarelo)">Centro Chapecó/SC</b></div>
+<div style="color:#fff;font-size:10px;text-align:right">⭐ 4.9 (342 avaliações)<br><b style="color:var(--amarelo)">Chapecó/SC</b></div>
 </div>
 
-<img src="https://i.ibb.co/wrWTfbND/Screenshot-20261015-155436-2.jpg" style="width:100%;height:260px;object-fit:cover;display:block;border-bottom:4px solid var(--vermelho)">
+<div style="max-width:1000px;margin:auto;background:#111;padding:15px">
 
-<div style="max-width:1000px;margin:auto;background:#111;padding:15px;border-radius:0 0 15px 15px">
-
-<h2 style="border-left:5px solid var(--amarelo);padding-left:10px;color:var(--amarelo)">🍔 10 MAIS PEDIDOS - AVALIADOS</h2>
+<h2 style="border-left:5px solid var(--amarelo);padding-left:10px;color:var(--amarelo)">🍔 10 HAMBÚRGUERES ARTESANAIS - TODOS COM FOTO DE HAMBÚRGUER</h2>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
 
-<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center"><img src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400" style="width:100%;height:110px;object-fit:cover;border-radius:8px"><div class="stars">★★★★★ <span style="color:#aaa">4.9 (89)</span></div><b style="color:var(--amarelo)">1. Bunker Clássico</b><br>R$ 24,90<br><button onclick="addItem('Bunker Clássico',24.90)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:8px;border-radius:6px;margin-top:6px;font-weight:bold">+ CARRINHO</button></div>
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">4.9 (89)</span></div><b style="color:var(--amarelo)">1. Bunker Clássico</b><br>R$ 24,90<br>
+<button onclick="adicionar('Bunker Clássico',24.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
 
-<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400" style="width:100%;height:110px;object-fit:cover;border-radius:8px"><div class="stars">★★★★★ <span style="color:#aaa">5.0 (127)</span></div><b style="color:var(--amarelo)">2. Bunker Bacon</b><br>R$ 29,90<br><button onclick="addItem('Bunker Bacon',29.90)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:8px;border-radius:6px;margin-top:6px;font-weight:bold">+ CARRINHO</button></div>
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">5.0 (127)</span></div><b style="color:var(--amarelo)">2. Bunker Bacon</b><br>R$ 29,90<br>
+<button onclick="adicionar('Bunker Bacon',29.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
 
-<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center"><img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400" style="width:100%;height:110px;object-fit:cover;border-radius:8px"><div class="stars">★★★★★ <span style="color:#aaa">4.8 (98)</span></div><b style="color:var(--amarelo)">3. Duplo Cheddar</b><br>R$ 36,90<br><button onclick="addItem('Duplo Cheddar',36.90)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:8px;border-radius:6px;margin-top:6px;font-weight:bold">+ CARRINHO</button></div>
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">4.8 (98)</span></div><b style="color:var(--amarelo)">3. Duplo Cheddar</b><br>R$ 36,90<br>
+<button onclick="adicionar('Duplo Cheddar',36.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
 
-<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center"><img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400" style="width:100%;height:110px;object-fit:cover;border-radius:8px"><div class="stars">★★★★★ <span style="color:#aaa">4.9 (156)</span></div><b style="color:var(--amarelo)">4. Monster 300g</b><br>R$ 39,90<br><button onclick="addItem('Monster 300g',39.90)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:8px;border-radius:6px;margin-top:6px;font-weight:bold">+ CARRINHO</button></div>
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">4.9 (156)</span></div><b style="color:var(--amarelo)">4. Monster 300g</b><br>R$ 39,90<br>
+<button onclick="adicionar('Monster 300g',39.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
 
-<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" style="width:100%;height:110px;object-fit:cover;border-radius:8px"><div class="stars">★★★★★ <span style="color:#aaa">4.7 (72)</span></div><b style="color:var(--amarelo)">5. Chicken Crispy</b><br>R$ 27,90<br><button onclick="addItem('Chicken Crispy',27.90)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:8px;border-radius:6px;margin-top:6px;font-weight:bold">+ CARRINHO</button></div>
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">4.7 (72)</span></div><b style="color:var(--amarelo)">5. Chicken Crispy</b><br>R$ 27,90<br>
+<button onclick="adicionar('Chicken Crispy',27.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
 
-<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center"><img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400" style="width:100%;height:110px;object-fit:cover;border-radius:8px"><div class="stars">★★★★★ <span style="color:#aaa">4.9 (203)</span></div><b style="color:var(--amarelo)">6. X-Tudo Bunker</b><br>R$ 32,90<br><button onclick="addItem('X-Tudo Bunker',32.90)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:8px;border-radius:6px;margin-top:6px;font-weight:bold">+ CARRINHO</button></div>
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">4.9 (203)</span></div><b style="color:var(--amarelo)">6. X-Tudo Bunker</b><br>R$ 32,90<br>
+<button onclick="adicionar('X-Tudo Bunker',32.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
 
-<div style="background:#1a1a1a;border:
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1593246049226-ded77bf90326?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">4.8 (65)</span></div><b style="color:var(--amarelo)">7. Veggie Bunker</b><br>R$ 26,90<br>
+<button onclick="adicionar('Veggie Bunker',26.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">5.0 (88)</span></div><b style="color:var(--amarelo)">8. Combo Casal</b><br>R$ 69,90<br>
+<button onclick="adicionar('Combo Casal',69.9)" style="width:100%;background:var(--vermelho);color:#fff;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">4.9 (112)</span></div><b style="color:var(--amarelo)">9. Batata Bunker G</b><br>R$ 28,90<br>
+<button onclick="adicionar('Batata Bunker G',28.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+<div style="background:#1a1a1a;border:2px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500" style="width:100%;height:110px;object-fit:cover;border-radius:8px">
+<div class="stars">★★★★★ <span style="color:#aaa">5.0 (210)</span></div><b style="color:var(--amarelo)">10. Família Bunker</b><br>R$ 119,90<br>
+<button onclick="adicionar('Familia Bunker',119.9)" style="width:100%;background:var(--amarelo);color:#000;border:0;padding:9px;border-radius:6px;margin-top:6px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+</div>
+
+<div style="background:var(--amarelo);padding:10px;border-radius:10px;margin-top:25px;text-align:center;color:#000;border:2px solid var(--vermelho)"><h2 style="margin:0">🥤 REFRIGERANTES GELADOS - COM FOTO</h2></div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px">
+
+<div style="background:#1a1a1a;border:1px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1624552184280-9e9631bbeee9?w=400" style="width:100%;height:90px;object-fit:contain;background:#fff;border-radius:8px">
+<b style="font-size:13px;color:var(--amarelo)">Coca Lata</b><br>R$ 6,00<br>
+<button onclick="adicionar('Coca Lata',6)" style="width:100%;background:var(--vermelho);color:#fff;border:0;padding:7px;border-radius:6px;margin-top:5px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+<div style="background:#1a1a1a;border:1px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1553456558-aff63285bdd1?w=400" style="width:100%;height:90px;object-fit:contain;background:#fff;border-radius:8px">
+<b style="font-size:13px;color:var(--amarelo)">Coca 1L</b><br>R$ 10,00<br>
+<button onclick="adicionar('Coca 1L',10)" style="width:100%;background:var(--vermelho);color:#fff;border:0;padding:7px;border-radius:6px;margin-top:5px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+<div style="background:#1a1a1a;border:1px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400" style="width:100%;height:90px;object-fit:contain;background:#fff;border-radius:8px">
+<b style="font-size:13px;color:var(--amarelo)">Sprite Lata</b><br>R$ 6,00<br>
+<button onclick="adicionar('Sprite Lata',6)" style="width:100%;background:var(--vermelho);color:#fff;border:0;padding:7px;border-radius:6px;margin-top:5px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+<div style="background:#1a1a1a;border:1px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=400" style="width:100%;height:90px;object-fit:contain;background:#fff;border-radius:8px">
+<b style="font-size:13px;color:var(--amarelo)">Guaraná Lata</b><br>R$ 6,00<br>
+<button onclick="adicionar('Guarana Lata',6)" style="width:100%;background:var(--vermelho);color:#fff;border:0;padding:7px;border-radius:6px;margin-top:5px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+<div style="background:#1a1a1a;border:1px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400" style="width:100%;height:90px;object-fit:contain;background:#fff;border-radius:8px">
+<b style="font-size:13px;color:var(--amarelo)">Fanta Laranja</b><br>R$ 6,00<br>
+<button onclick="adicionar('Fanta Lata',6)" style="width:100%;background:var(--vermelho);color:#fff;border:0;padding:7px;border-radius:6px;margin-top:5px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+<div style="background:#1a1a1a;border:1px solid var(--amarelo);border-radius:12px;padding:8px;color:#fff;text-align:center">
+<img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400" style="width:100%;height:90px;object-fit:contain;background:#fff;border-radius:8px">
+<b style="font-size:13px;color:var(--amarelo)">Água 500ml</b><br>R$ 4,00<br>
+<button onclick="adicionar('Agua 500ml',4)" style="width:100%;background:var(--vermelho);color:#fff;border:0;padding:7px;border-radius:6px;margin-top:5px;font-weight:bold;cursor:pointer">+ CARRINHO</button>
+</div>
+
+</div>
+
+<div style="height:80px"></div>
+</div>
+
+<div id="carrinho" onclick="abrir()">🛒 Carrinho (<span id="qtd">0</span>) - R$ <span id="tot">0,00</span></div>
+<a id="zap" href="https://wa.me/5549991017850?text=Olá%20Bunker!%20Quero%20fazer%20um%20pedido" target="_blank">💬</a>
+
+<div id="modal"><div style="max-width:500px;margin:auto;background:#fff;border-radius:15px;padding:15px;margin-top:20px;border:3px solid var(--amarelo)">
+<h2>🛒 Seu Pedido - <span style="color:var(--vermelho)">Bunker</span></h2>
+<div id="lista"></div>
+<div style="border-top:2px solid #000;margin-top:10px;padding-top:10px"><b>Total: R$ <span id="totM">0,00</span></b></div>
+<input id="nome" placeholder="Seu nome" style="width:100%;padding:12px;margin-top:12px;border-radius:8px;border:1px solid #ccc;box-sizing:border
