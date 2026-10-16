@@ -115,9 +115,5 @@ function del(i){car.splice(i,1);atualiza()}
 function abrir(){document.getElementById('m').style.display='block'}
 function fechar(){document.getElementById('m').style.display='none'}
 function enviar(){if(car.length==0){alert('Carrinho vazio');return}var no=document.getElementById('n').value||'Cliente';var en=document.getElementById('e').value||'Retirada';var msg='PEDIDO BUNKER%0A'+no+'%0A'+en+'%0A%0A';var tot=0;for(var k=0;k<car.length;k++){msg+=car[k].nome+' R$'+car[k].preco+'%0A';tot+=car[k].preco}msg+='%0ATOTAL R$'+tot;window.open('https://wa.me/5549991017850?text='+msg,'_blank')}
-<div style="margin-top:30px;background:#111;padding:18px;border-radius:12px;border:2px solid #ffcc00;text-align:center">
-<div style="color:#ffcc00;font-weight:900;margin-bottom:10px">📍 RUA CLEVELÂNDIA, 90D - CENTRO - CHAPECÓ - SC</div>
-<iframe src="https://www.google.com/maps?q=Rua%20Clevel%C3%A2ndia%2090D%20Centro%20Chapec%C3%B3%20SC&z=17&output=embed" width="100%" height="300" style="border:0;border-radius:8px" allowfullscreen loading="lazy"></iframe>
-<br><a href="https://www.google.com/maps/search/?api=1&query=Rua+Clevelândia+90D+Centro+Chapecó+SC" target="_blank" style="display:inline-block;margin-top:10px;background:#25D366;color:#fff;padding:10px 18px;border-radius:20px;text-decoration:none;font-weight:bold">ABRIR NO MAPS</a>
-</div></script>
+</script>
 </body></html>
